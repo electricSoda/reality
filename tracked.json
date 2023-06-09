@@ -1,0 +1,12 @@
+{
+    "code": {"Productivity": ".*"},
+    "chrome": {
+		"Entertainment": "^.*(youtube|twitch|netflix|reddit|quora).*$",
+		"Social Media": "^.*(discord|twitter).*$",
+		"Productivity": ".*"
+	},
+    "mintty": {"Productivity": ".*"},
+    "notion": {"Organization": ".*"},
+    "slack": {"Social Media": ".*"},
+    "timed": {"Timer": ".*"}
+}
