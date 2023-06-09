@@ -2,7 +2,7 @@ import re
 import json
 import os
 
-f = open(os.getcwd()+'\\\\tracked.json',)
+f = open(os.getcwd()+'\\tracked.json',)
 categories = json.load(f)
 
 
