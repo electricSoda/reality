@@ -110,7 +110,6 @@ canvas.place(relx=.5, rely=.5,anchor= CENTER)
 
 # CONFIGURATION
 root.title("reality")
-root.attributes("-topmost", True)
 root.attributes("-alpha", 0.99)
 root.geometry(f"{w}x{h}+{xOffset}+50")
 root.configure(background='white')
