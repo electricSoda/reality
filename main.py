@@ -10,12 +10,11 @@ import math
 import numpy as np
 import pprint
 import sys
+import os
 
 import categories
 
 # HELPER FUNCTIONS
-import os
-
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
