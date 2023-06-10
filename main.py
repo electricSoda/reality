@@ -85,7 +85,7 @@ activities = {}
 colors=['#f66d44', '#feae65', '#e6f69d', '#aadea7', '#64c2a6', '#2d87bb']
 
 root = Tk()
-w,h = 350, 350
+w,h = 450, 450
 xOffset = int(root.winfo_screenwidth())
 running = True
 tick = 0
@@ -99,7 +99,7 @@ wedges, labels = None, None
 # the rest of the widgets), and the first widget initialized at the bottom of the stack
 fig, ax = plt.subplots(figsize=((w)/DPI, (h)/DPI), dpi = DPI, picker=True) # picker = True is VERY IMPORTANT!!! (it makes our plot be pickable and the event, "pick_event" be able to fire
 plt.pie([1], colors=colors) # initial pie chart
-plt.rcParams.update({'font.size': 7.5}) # font size
+plt.rcParams.update({'font.size': 10}) # font size
 
 c = FigureCanvasTkAgg(fig, master = root) # connecting the plt pie chart to tkinter
 canvas = c.get_tk_widget()
