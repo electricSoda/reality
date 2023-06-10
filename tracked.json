@@ -8,5 +8,8 @@
     "mintty": {"Productivity": ".*"},
     "notion": {"Organization": ".*"},
     "slack": {"Social Media": ".*"},
-    "timed": {"Timer": ".*"}
+    "timed": {"Timer": ".*"},
+    "-limits": {
+        "Entertainment": 3600
+    }
 }

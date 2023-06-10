@@ -6,7 +6,7 @@ f = open(os.getcwd()+'\\tracked.json',)
 categories = json.load(f)
 
 
-def getType(processName: str, titleName: str):
+def getType(processName: str, titleName: str) -> str:
     processName = processName.lower().replace(".exe", "")
     if processName not in categories:
         return "Other"
@@ -17,3 +17,9 @@ def getType(processName: str, titleName: str):
     for key in list(currApp.keys()):
         if re.search(currApp[key], titleName):
             return key
+        
+def checkLimit(t: str, tick: int) -> bool:
+    if t in categories["-limits"]:
+        if tick > categories["-limits"][t]:
+            return True
+    return False
