@@ -1,7 +1,4 @@
 # IMPORTS
-import win32gui, win32process, psutil
-import pygetwindow as pw
-
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from tkinter import *
@@ -13,6 +10,7 @@ import sys
 import os
 
 import categories
+import processHandling as pH
 
 # HELPER FUNCTIONS
 def resource_path(relative_path):
@@ -22,21 +20,6 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
-
-def processName():
-    try:
-        pid = win32process.GetWindowThreadProcessId(win32gui.GetForegroundWindow())
-        return(psutil.Process(pid[-1]).name())
-    except:
-        print("ERROR")
-        return None
-    
-def windowTitle():
-    try:
-        return pw.getActiveWindow().title
-    except:
-        print("ERROR")
-        return None
 
 def format(seconds: float):
     if seconds <60:
@@ -66,7 +49,7 @@ def hideInfo(e):
 def cycle():
     global tick, currentWindow
     if running:
-        category = categories.getType(processName(), windowTitle())
+        category = categories.getType(pH.processName(), pH.windowTitle())
         
         if category != "Timer":
             if category not in activities: activities[category] = 0
