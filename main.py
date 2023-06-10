@@ -130,7 +130,7 @@ root.bind("<Leave>", hideInfo)
 root.protocol("WM_DELETE_WINDOW", close_window)
 fig.canvas.mpl_connect("motion_notify_event", onPick)
 
-root.after(1000, cycle)
+cycle()
 root.mainloop()
 
 
