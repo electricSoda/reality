@@ -49,6 +49,9 @@ def cycle():
     if running:
         category = categories.getType(pH.processName(), pH.windowTitle())
         
+        if categories.checkLimit(category, tick): #over limit
+            pH.closeWindow()
+        
         if category != "Timer":
             if category not in activities: activities[category] = 0
             activities[category] += 1 
