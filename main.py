@@ -101,6 +101,7 @@ favicon = PhotoImage(file = resource_path("favicon.png"))
 root.iconphoto(False, favicon)
 
 def close_window():
+    global running
     try: 
         plt.close('all')
         running = False
