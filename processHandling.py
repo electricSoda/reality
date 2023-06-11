@@ -14,4 +14,4 @@ def windowTitle():
         return pw.getActiveWindow().title
     except:
         print("ERROR")
-        return None
+        return None 
