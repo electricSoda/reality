@@ -17,11 +17,10 @@ def windowTitle():
         return None 
     
 def closeWindow():
+    curr = processName()
     for process in psutil.process_iter():
-        if process.name() == processName():
+        if process.name() == curr:
             process.kill()
-            break
-            
 # Testing
 if __name__ == "__main__":
     import time

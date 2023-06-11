@@ -18,9 +18,9 @@ def getType(processName: str, titleName: str) -> str:
         if re.search(currApp[key], titleName):
             return key
         
-def checkLimit(t: str, tick: int) -> bool:
+def checkLimit(t: str, timeSpent: int) -> bool:
     if t in categories["-limits"]:
-        if tick > categories["-limits"][t]:
+        if timeSpent > categories["-limits"][t]:
             return True
     return False
 

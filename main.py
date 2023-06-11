@@ -48,12 +48,12 @@ def cycle():
     global tick, currentWindow
     if running:
         category = categories.getType(pH.processName(), pH.windowTitle())
+        if category not in activities: activities[category] = 0
         
-        if categories.checkLimit(category, tick): #over limit
+        if categories.checkLimit(category, activities[category]): #over limit
             pH.closeWindow()
         
         if category != "Timer":
-            if category not in activities: activities[category] = 0
             activities[category] += 1 
 
         plot()
@@ -64,7 +64,7 @@ def cycle():
 
 
 # VARIABLE INITIALIZATION
-activities = {}
+activities = {"Entertainment": 3599}
 colors=['#f66d44', '#feae65', '#e6f69d', '#aadea7', '#64c2a6', '#2d87bb']
 
 root = Tk()
