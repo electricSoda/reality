@@ -64,7 +64,7 @@ def cycle():
 
 
 # VARIABLE INITIALIZATION
-activities = {"Entertainment": 3599}
+activities = {}
 colors=['#f66d44', '#feae65', '#e6f69d', '#aadea7', '#64c2a6', '#2d87bb']
 
 root = Tk()
