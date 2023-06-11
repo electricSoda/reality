@@ -23,3 +23,10 @@ def checkLimit(t: str, tick: int) -> bool:
         if tick > categories["-limits"][t]:
             return True
     return False
+
+# Testing
+if __name__ == "__main__":
+    import time
+    time.sleep(0.5)
+    print(checkLimit("Entertainment", 3600))
+    print(checkLimit("Entertainment", 3601))
