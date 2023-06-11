@@ -4,8 +4,6 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from tkinter import *
 
 import math
-import numpy as np
-import pprint
 import sys
 import os
 

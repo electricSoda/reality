@@ -15,3 +15,15 @@ def windowTitle():
     except:
         print("ERROR")
         return None 
+    
+def closeWindow():
+    for process in psutil.process_iter():
+        if process.name() == processName():
+            process.kill()
+            break
+            
+# Testing
+if __name__ == "__main__":
+    import time
+    time.sleep(0.5)
+    closeWindow()
